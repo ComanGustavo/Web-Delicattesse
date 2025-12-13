@@ -1,0 +1,46 @@
+/* style.css */
+body {
+    background-color: #f8f9fa; 
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para los botones de categoría */
+.category-btn {
+    font-weight: bold;
+    border-radius: 50rem; 
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las tarjetas de menú */
+.menu-card {
+    transition: transform 0.2s;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las imágenes de los productos */
+.menu-item-image {
+    width: 100%;       
+    height: 180px;     
+    object-fit: cover; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.price {
+    font-size: 1.25rem;
+    color: #dc3545; /* Rojo de Bootstrap */
+    font-weight: 700;
+}
