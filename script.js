@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let total = 0;
 
             carrito.forEach((item, index) => {
-                const precioLimpio = parseInt(item.price.replace('.', '').replace(',', ''));
+                const precioLimpio = parseInt(item.price.replace(/\./g, ''));
                 total += precioLimpio;
                 lista.innerHTML += `
                     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -78,22 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('total-pago').innerText = `$${total.toLocaleString('es-AR')}`;
         }
 
-        // Lógica para el botón de Mercado Pago
+        // --- Lógica de visualización de datos de Transferencia ---
         const selectorPago = document.getElementById('forma-pago');
-        const contenedorMP = document.getElementById('contenedor-boton-mp');
-        const linkMP = document.getElementById('link-mp');
+        const contenedorTransferencia = document.getElementById('contenedor-boton-mp');
 
-        if (selectorPago && contenedorMP) {
-            if (selectorPago.value === "Transferencia") {
-                contenedorMP.style.display = 'block';
-                linkMP.href = "https://link.mercadopago.com.ar/facu.deleittese";
-            } else {
-                contenedorMP.style.display = 'none';
-            }
+        if (selectorPago && contenedorTransferencia) {
+            // Mostramos el cuadro solo si elige Transferencia
+            contenedorTransferencia.style.display = (selectorPago.value === "Transferencia") ? 'block' : 'none';
         }
     }
 
-    // Escuchar cambios en la forma de pago
+    // Escuchar cambios en la forma de pago para mostrar/ocultar el alias inmediatamente
     const formaPagoSelect = document.getElementById('forma-pago');
     if (formaPagoSelect) {
         formaPagoSelect.addEventListener('change', actualizarInterfaz);
@@ -117,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        let mensaje = `*DELEITTESE - NUEVO PEDIDO*\n\n`;
+        let mensaje = `*DELEITTESE - NUEVO PEDIDO* 👨🏾‍🍳\n\n`;
         mensaje += `*CLIENTE:* ${nombre}\n`;
         mensaje += `*TEL:* ${tel}\n`;
         mensaje += `*DIR:* ${dir}\n`;
@@ -130,8 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         mensaje += `\n*TOTAL: ${total}*\n`;
 
+        // Datos de transferencia limpios sin guiones que confundan
         if (pago === "Transferencia") {
-            mensaje += `\n_Titular: Torrez Omar Facundo_\n_Alias: facu.deleittese_`;
+            mensaje += `\n--------------------------\n`;
+            mensaje += `*DATOS DE TRANSFERENCIA*\n`;
+            mensaje += `*Titular:* Facundo Omar Torrez\n`;
+            mensaje += `*Alias:* facu.deleittese\n`;
+            mensaje += `--------------------------\n`;
+            mensaje += `_Por favor, envía el comprobante por aquí._`;
         }
 
         const numeroDuenio = "5493644679057"; 
