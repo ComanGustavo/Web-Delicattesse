@@ -1,8 +1,6 @@
-// Variable global para el carrito
 let carrito = [];
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Base de Datos Estática del Menú
     const menuData = [
         { id: 1, name: "Empanadas caseras - Jamón y Muzza", price: "13.000", category: "Empanadas", icon: "🥟", image: "imagen/empanadas.jpg" }, 
         { id: 2, name: "Papas fritas Chica", price: "4000", category: "Papas Fritas", icon: "🍟", image: "imagen/img30.jpeg" }, 
@@ -40,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuContainer = document.getElementById('menu-list');
     const categoryButtonsContainer = document.getElementById('category-buttons');
 
-    // --- FUNCIONES DEL CARRITO ---
     window.agregarAlCarrito = (id) => {
         const producto = menuData.find(item => item.id === id);
         carrito.push(producto);
@@ -60,9 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (lista) {
             lista.innerHTML = '';
             let total = 0;
-
             carrito.forEach((item, index) => {
-                const precioLimpio = parseInt(item.price.replace(/\./g, ''));
+                const precioLimpio = parseInt(item.price.replace(/\./g, '').replace(/,/g, ''));
                 total += precioLimpio;
                 lista.innerHTML += `
                     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -78,23 +74,20 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('total-pago').innerText = `$${total.toLocaleString('es-AR')}`;
         }
 
-        // --- Lógica de visualización de datos de Transferencia ---
+        // Lógica corregida para mostrar Alias y ocultar botón de pago
         const selectorPago = document.getElementById('forma-pago');
-        const contenedorTransferencia = document.getElementById('contenedor-boton-mp');
+        const cuadroAlias = document.getElementById('contenedor-alias');
 
-        if (selectorPago && contenedorTransferencia) {
-            // Mostramos el cuadro solo si elige Transferencia
-            contenedorTransferencia.style.display = (selectorPago.value === "Transferencia") ? 'block' : 'none';
+        if (selectorPago && cuadroAlias) {
+            cuadroAlias.style.display = (selectorPago.value === "Transferencia") ? 'block' : 'none';
         }
     }
 
-    // Escuchar cambios en la forma de pago para mostrar/ocultar el alias inmediatamente
     const formaPagoSelect = document.getElementById('forma-pago');
     if (formaPagoSelect) {
         formaPagoSelect.addEventListener('change', actualizarInterfaz);
     }
 
-    // --- FUNCIÓN DE ENVÍO POR WHATSAPP ---
     window.enviarPedidoWhatsApp = () => {
         const nombre = document.getElementById('cliente-nombre').value;
         const tel = document.getElementById('cliente-tel').value;
@@ -125,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         mensaje += `\n*TOTAL: ${total}*\n`;
 
-        // Datos de transferencia limpios sin guiones que confundan
         if (pago === "Transferencia") {
             mensaje += `\n--------------------------\n`;
             mensaje += `*DATOS DE TRANSFERENCIA*\n`;
@@ -137,23 +129,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const numeroDuenio = "5493644679057"; 
         const url = `https://wa.me/${numeroDuenio}?text=${encodeURIComponent(mensaje)}`;
-        
         window.open(url, '_blank');
 
-        // Limpiar carrito y cerrar modal [cite: 2025-12-13]
         carrito = [];
         actualizarInterfaz();
-        
         document.getElementById('cliente-nombre').value = '';
         document.getElementById('cliente-tel').value = '';
         document.getElementById('cliente-dir').value = '';
-
         const modalEl = document.getElementById('modalCarrito');
         const modal = bootstrap.Modal.getInstance(modalEl);
         if (modal) modal.hide();
     };
 
-    // --- RENDERIZADO DEL MENÚ ---
     function renderMenuItem(item) {
         const colDiv = document.createElement('div');
         colDiv.className = 'col-lg-3 col-md-6 col-sm-12 mb-4'; 
