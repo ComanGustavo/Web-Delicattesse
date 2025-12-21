@@ -1,34 +1,62 @@
-/* style.css */
-body { background-color: #f8f9fa; font-family: 'Arial', sans-serif; }
-
-/* Galería de 4 productos por fila */
-#menu-list .col-custom {
-    width: 100%;
-    padding: 10px;
+/* Estilos Generales */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media (min-width: 992px) {
-    #menu-list .col-custom {
-        width: 25%; /* 4 por fila */
+/* Ajuste de la Galería Responsive [cite: 2025-10-27] */
+#menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Diseño para computadoras (4 columnas) [cite: 2025-10-27] */
+.col-custom {
+    width: calc(25% - 15px); /* Ajuste para que entren 4 exactas */
+    min-width: 250px;
+}
+
+/* Diseño para celulares (2 columnas) */
+@media (max-width: 768px) {
+    .col-custom {
+        width: calc(50% - 10px); /* 2 columnas en móviles */
+        min-width: 140px;
+    }
+    
+    .menu-item-image {
+        height: 180px !important; /* Altura más baja para móviles */
+    }
+
+    h6.card-title {
+        font-size: 0.9rem; /* Texto más pequeño para que no se corte */
     }
 }
 
-.menu-card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
+/* Estilo de las imágenes [cite: 2025-10-27] */
 .menu-item-image {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 250px;
+    object-fit: cover; /* Evita que la comida se vea estirada */
+    border-radius: 8px 8px 0 0;
 }
 
-.price { font-size: 1.2rem; color: #dc3545; font-weight: bold; }
+/* Tarjetas de productos */
+.menu-card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-/* Ocultar elementos en la impresión real si se usa window.print directamente */
-@media print {
-    .navbar, .btn, .category-btn, .modal-footer, .btn-close { display: none !important; }
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Botón de Mercado Pago */
+#contenedor-boton-mp {
+    border: 1px solid #009ee3;
+    background-color: #f0faff;
+    border-radius: 10px;
+    padding: 15px;
 }
