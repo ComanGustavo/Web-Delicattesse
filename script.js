@@ -1,4 +1,5 @@
 let carrito = [];
+const COSTO_ENVIO = 1800; // Valor del envío ajustable
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuData = [
@@ -35,9 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 31, name: "Pic. Completa", price: "30.000", category: "Picadas", icon: "🧀", image: "imagen/img16.jpeg" }
     ];
 
-    const menuContainer = document.getElementById('menu-list');
-    const categoryButtonsContainer = document.getElementById('category-buttons');
-
     window.agregarAlCarrito = (id) => {
         const producto = menuData.find(item => item.id === id);
         carrito.push(producto);
@@ -56,10 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const lista = document.getElementById('lista-carrito');
         if (lista) {
             lista.innerHTML = '';
-            let total = 0;
+            let subtotal = 0;
             carrito.forEach((item, index) => {
                 const precioLimpio = parseInt(item.price.replace(/\./g, '').replace(/,/g, ''));
-                total += precioLimpio;
+                subtotal += precioLimpio;
                 lista.innerHTML += `
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <div>${item.name}</div>
@@ -71,13 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </li>`;
             });
-            document.getElementById('total-pago').innerText = `$${total.toLocaleString('es-AR')}`;
+
+            let totalFinal = subtotal > 0 ? subtotal + COSTO_ENVIO : 0;
+            
+            if (carrito.length > 0) {
+                lista.innerHTML += `
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-info">
+                        <div><strong>Costo de Envío</strong></div>
+                        <div><span class="badge bg-info text-dark rounded-pill me-5">$${COSTO_ENVIO.toLocaleString('es-AR')}</span></div>
+                    </li>`;
+            }
+            document.getElementById('total-pago').innerText = `$${totalFinal.toLocaleString('es-AR')}`;
         }
 
-        // Lógica corregida para mostrar Alias y ocultar botón de pago
         const selectorPago = document.getElementById('forma-pago');
         const cuadroAlias = document.getElementById('contenedor-alias');
-
         if (selectorPago && cuadroAlias) {
             cuadroAlias.style.display = (selectorPago.value === "Transferencia") ? 'block' : 'none';
         }
@@ -116,15 +122,17 @@ document.addEventListener('DOMContentLoaded', () => {
             mensaje += `${index + 1}. ${item.name} - $${item.price}\n`;
         });
 
-        mensaje += `\n*TOTAL: ${total}*\n`;
+        mensaje += `\n*COSTO DE ENVÍO:* $${COSTO_ENVIO.toLocaleString('es-AR')}\n`;
+        mensaje += `*TOTAL FINAL: ${total}*\n`;
 
         if (pago === "Transferencia") {
             mensaje += `\n--------------------------\n`;
-            mensaje += `*DATOS DE TRANSFERENCIA*\n`;
-            mensaje += `*Titular:* Facundo Omar Torrez\n`;
+            mensaje += `⚠️ *AVISO SOBRE EL PAGO* ⚠️\n`;
+            mensaje += `*El pedido no será procesado hasta recibir el comprobante de pago.*\n\n`;
             mensaje += `*Alias:* facu.deleittese\n`;
+            mensaje += `*Titular:* Facundo Omar Torrez\n`;
             mensaje += `--------------------------\n`;
-            mensaje += `_Por favor, envía el comprobante por aquí._`;
+            mensaje += `✅ *Enviando comprobante en breve...*`;
         }
 
         const numeroDuenio = "5493644679057"; 
@@ -180,7 +188,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.classList.replace('btn-outline-dark', 'btn-dark');
             };
             if(cat === 'Todas') btn.classList.replace('btn-outline-dark', 'btn-dark');
-            categoryButtonsContainer.appendChild(btn);
+            const catButtons = document.getElementById('category-buttons');
+            if(catButtons) catButtons.appendChild(btn);
         });
     }
 
