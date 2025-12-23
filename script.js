@@ -10,7 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 5, name: "Papas con Cheddar", price: "10.000", category: "Papas Fritas", icon: "🍟", image: "imagen/img55.jpeg" },
         { id: 6, name: "Papas Cheddar y verdeo", price: "12.000", category: "Papas Fritas", icon: "🍟", image: "imagen/img1.jpeg" },
         { id: 7, name: "Carlito", price: "5000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img8.jpeg" }, 
-        { id: 8, name: "Triple de verduras", price: "6000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img7.jpeg" },
+        { id: 8, name: "Triple Frío de Verduras con Jamón y Queso", price: "6000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img7.jpeg" },
+        { id: 44, name: "Triple Tostado con Verduras", price: "6000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img65.jpeg" },
+        { id: 43, name: "Miga con Jamón y Queso", price: "6000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img64.jpeg" },
+        { id: 47, name: "Psicodélico con Papas", price: "6000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img70.jpeg" },
+
         { id: 9, name: "Pizza Muzzarela", price: "10.000", category: "Pizzas", icon: "🍕", image: "imagen/img31.jpeg" }, 
         { id: 10, name: "Pizza Muzza y Panceta", price: "12.000", category: "Pizzas", icon: "🍕", image: "imagen/img34.jpeg" },
         { id: 11, name: "Pizza Especial Calabresa ", price: "14.000", category: "Pizzas", icon: "🍕", image: "imagen/img5.jpeg" },
@@ -24,11 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 39, name: "Pizza Napolitana con Jamón ", price: "13.000", category: "Pizzas", icon: "🍕", image: "imagen/img61.jpeg" },
         { id: 40, name: "Pizza Huevos, Cheddar y Morrones ", price: "13.000", category: "Pizzas", icon: "🍕", image: "imagen/img62.jpeg" },
         { id: 41, name: "Pizza Jamón y Queso", price: "13.000", category: "Pizzas", icon: "🍕", image: "imagen/img63.jpeg" },
+        { id: 46, name: "Pizza Cuatro Sabores", price: "13.000", category: "Pizzas", icon: "🍕", image: "imagen/img69.jpeg" },
 
         { id: 15, name: "Pizza Lomopizza", price: "35.999", category: "Pizzas", icon: "🍕", image: "imagen/img4.jpeg" },
         { id: 16, name: "Hamburguesa Simple", price: "5000", category: "Hamburguesas", icon: "🍔", image: "imagen/img28.jpeg" }, 
         { id: 17, name: "Hamburguesa Simple + Papas", price: "6000", category: "Hamburguesas", icon: "🍔", image: "imagen/img29.jpeg" },
-        { id: 18, name: "Hamburguesa Especial especiacial con Panceta", price: "7000", category: "Hamburguesas", icon: "🍔", image: "imagen/img13.jpeg" },
+        { id: 18, name: "Hamburguesa Especial con Panceta", price: "7000", category: "Hamburguesas", icon: "🍔", image: "imagen/img13.jpeg" },
+        { id: 45, name: "Hamburguesa Especial con Papas", price: "7000", category: "Hamburguesas", icon: "🍔", image: "imagen/img68.jpeg" },
+
         { id: 19, name: "Hamburguesa Roquefort y Panceta", price: "10.500", category: "Hamburguesas", icon: "🍔", image: "imagen/img32.jpeg" },
         { id: 32, name: "Hamburguesa al Plato", price: "6000", category: "Hamburguesas", icon: "🍔", image: "imagen/img50.jpeg" },
         { id: 20, name: "Sándwich Mila Carne Simple + Papas", price: "15.000", category: "Sándwiches de Mila", icon: "🥪", image: "imagen/img26.jpeg" }, 
@@ -39,13 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 24, name: "Lomo cheddar y panceta + Papas", price: "20.000", category: "Lomos", icon: "🥩", image: "imagen/img.jpeg" },
         { id: 34, name: "Lomo Premium con Cheddar y Panceta", price: "20.000", category: "Lomos", icon: "🥩", image: "imagen/img52.jpeg" },
         { id: 25, name: "Milanesa Napolitana XL", price: "15.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img2.jpeg" }, 
+        { id: 48, name: "Milanesa de Pollo Gratinada", price: "25.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img71.jpeg" }, 
+        
+
         { id: 26, name: "Milanesa Calabresa", price: "14.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img56.jpeg" },
         { id: 27, name: "Mila p/compartir Cheddar c/ panceta +🍟", price: "26.000", category: "Milanesas p/compartir", icon: "👨‍👩‍👧‍👦", image: "imagen/img27.jpeg" }, 
         { id: 28, name: "Mila napolitana M +🍟 (carne o pollo)", price: "25.000", category: "Milanesas p/compartir", icon: "👨‍👩‍👧‍👦", image: "imagen/img27.jpeg" },
-        { id: 29, name: "Picada Individual", price: "14.000", category: "Picadas", icon: "🧀", image: "imagen/img.jpeg" }, 
+        { id: 29, name: "Picada Individual", price: "14.000", category: "Picadas", icon: "🧀", image: "imagen/img67.jpeg" }, 
         { id: 30, name: "Picada para 2", price: "25.000", category: "Picadas", icon: "🧀", image: "imagen/img15.jpeg" },
-        { id: 31, name: "Picada Familiar", price: "30.000", category: "Picadas", icon: "🧀", image: "imagen/img16.jpeg" }
-        { id: 42, name: "Media Picada", price: "30.000", category: "Picadas", icon: "🧀", image: "imagen/img63.jpeg" }
+        { id: 31, name: "Picada Familiar", price: "30.000", category: "Picadas", icon: "🧀", image: "imagen/img16.jpeg" },
+        { id: 42, name: "Media Picada", price: "30.000", category: "Picadas", icon: "🧀", image: "imagen/img63.jpeg" },
+        { id: 49, name: "Picada Clásica 3", price: "30.000", category: "Picadas", icon: "🧀", image: "imagen/img72.jpeg" },
     ];
 
     window.agregarAlCarrito = (id) => {
