@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 38, name: "Pizza Cherry's y Nueces ", price: "13.000", category: "Pizzas", icon: "🍕", image: "imagen/img60.jpeg" },
         { id: 39, name: "Pizza Napolitana con Jamón ", price: "13.000", category: "Pizzas", icon: "🍕", image: "imagen/img61.jpeg" },
         { id: 40, name: "Pizza Huevos, Cheddar y Morrones ", price: "13.000", category: "Pizzas", icon: "🍕", image: "imagen/img62.jpeg" },
-        { id: 41, name: "Pizza Jamón y Queso", price: "13.000", category: "Pizzas", icon: "🍕", image: "imagen/img63.jpeg" },
+        { id: 41, name: "Pizza Jamón y Queso", price: "13.000", category: "Pizzas", icon: "🍕", image: "imagen/imgjpeg" },
         { id: 46, name: "Pizza Cuatro Sabores", price: "13.000", category: "Pizzas", icon: "🍕", image: "imagen/img69.jpeg" },
 
-        { id: 15, name: "Pizza Lomopizza", price: "35.999", category: "Pizzas", icon: "🍕", image: "imagen/img4.jpeg" },
+        { id: 15, name: "Lomopizza", price: "35.999", category: "Pizzas", icon: "🍕", image: "imagen/img4.jpeg" },
         { id: 16, name: "Hamburguesa Simple", price: "5000", category: "Hamburguesas", icon: "🍔", image: "imagen/img28.jpeg" }, 
         { id: 17, name: "Hamburguesa Simple + Papas", price: "6000", category: "Hamburguesas", icon: "🍔", image: "imagen/img29.jpeg" },
         { id: 18, name: "Hamburguesa Especial con Panceta", price: "7000", category: "Hamburguesas", icon: "🍔", image: "imagen/img13.jpeg" },
