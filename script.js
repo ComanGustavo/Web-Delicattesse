@@ -48,10 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 25, name: "Milanesa Napolitana XL", price: "15.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img2.jpeg" }, 
         { id: 48, name: "Milanesa de Pollo Gratinada", price: "25.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img71.jpeg" }, 
         
-
-        { id: 26, name: "Milanesa Calabresa", price: "14.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img56.jpeg" },
-        { id: 27, name: "Mila p/compartir Cheddar c/ panceta +🍟", price: "26.000", category: "Milanesas p/compartir", icon: "👨‍👩‍👧‍👦", image: "imagen/img27.jpeg" }, 
-        { id: 28, name: "Mila napolitana M +🍟 (carne o pollo)", price: "25.000", category: "Milanesas p/compartir", icon: "👨‍👩‍👧‍👦", image: "imagen/img27.jpeg" },
+        { id: 26, name: "Milanesa Calabresa", price: "25.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img56.jpeg" },
+        { id: 50, name: "Milanesa Fugazza", price: "24.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img75.jpeg" },
+        { id: 27, name: "Milanesa para compartir Cheddar con Panceta más🍟", price: "26.000", category: "Milanesas p/compartir", icon: "🍽️", image: "imagen/img27.jpeg" }, 
+        { id: 28, name: "Milanesa Napolitana más🍟 (carne o pollo)", price: "25.000", category: "Milanesas p/compartir", icon: "🍽️", image: "imagen/img73.jpeg" },
+        { id: 51, name: "Milanesa Muzzarella con Panceta y Huevos", price: "24.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img76.jpeg" },
+        { id: 52, name: "Milanesa a Caballo", price: "20.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img77.jpeg" },
+        { id: 29, name: "Picada Individual", price: "14.000", category: "Picadas", icon: "🧀", image: "imagen/img67.jpeg" }, 
         { id: 29, name: "Picada Individual", price: "14.000", category: "Picadas", icon: "🧀", image: "imagen/img67.jpeg" }, 
         { id: 30, name: "Picada para 2", price: "25.000", category: "Picadas", icon: "🧀", image: "imagen/img15.jpeg" },
         { id: 31, name: "Picada Familiar", price: "30.000", category: "Picadas", icon: "🧀", image: "imagen/img16.jpeg" },
