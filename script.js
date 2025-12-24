@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 43, name: "Miga con Jamón y Queso", price: "6000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img64.jpeg" },
         { id: 47, name: "Psicodélico con Papas", price: "6000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img70.jpeg" },
 
-        { id: 9, name: "Pizza Muzzarela", price: "10.000", category: "Pizzas", icon: "🍕", image: "imagen/img31.jpeg" }, 
-        { id: 10, name: "Pizza Muzza y Panceta", price: "12.000", category: "Pizzas", icon: "🍕", image: "imagen/img34.jpeg" },
+        { id: 9, name: "Pizza Muzzarella", price: "10.000", category: "Pizzas", icon: "🍕", image: "imagen/img31.jpeg" }, 
+        { id: 10, name: "Pizza Muzzarella y Panceta", price: "12.000", category: "Pizzas", icon: "🍕", image: "imagen/img34.jpeg" },
         { id: 11, name: "Pizza Especial Calabresa ", price: "14.000", category: "Pizzas", icon: "🍕", image: "imagen/img5.jpeg" },
         { id: 12, name: "Pizza Especial", price: "12.000", category: "Pizzas", icon: "🍕", image: "imagen/img6.jpeg" },
         { id: 13, name: "Pizza Jamón y Huevos", price: "13.000", category: "Pizzas", icon: "🍕", image: "imagen/img11.jpeg" },
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 51, name: "Milanesa Muzzarella con Panceta y Huevos", price: "24.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img76.jpeg" },
         { id: 52, name: "Milanesa a Caballo", price: "20.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img77.jpeg" },
         { id: 29, name: "Picada Individual", price: "14.000", category: "Picadas", icon: "🧀", image: "imagen/img67.jpeg" }, 
-        { id: 29, name: "Picada Individual", price: "14.000", category: "Picadas", icon: "🧀", image: "imagen/img67.jpeg" }, 
+        
         { id: 30, name: "Picada para 2", price: "25.000", category: "Picadas", icon: "🧀", image: "imagen/img15.jpeg" },
         { id: 31, name: "Picada Familiar", price: "30.000", category: "Picadas", icon: "🧀", image: "imagen/img16.jpeg" },
         { id: 42, name: "Media Picada", price: "30.000", category: "Picadas", icon: "🧀", image: "imagen/img63.jpeg" },
