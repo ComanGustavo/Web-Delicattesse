@@ -1,7 +1,10 @@
 /* Estilos Generales */
 body {
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Un degradado suave que simula una iluminación profesional */
+    background: linear-gradient(135deg, #fdf5e6 0%, #faebd7 100%);
+    background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 /* Ajuste de la Galería Responsive [cite: 2025-10-27] */
