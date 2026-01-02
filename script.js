@@ -1,7 +1,7 @@
 let carrito = [];
 
 const menuData = [
-    // --- NUEVA SECCIÓN: BEBIDAS ---
+    // BEBIDAS
     { id: 101, name: "Coca Cola 1L", price: "3.500", category: "Bebidas", icon: "🥤", image: "imagen/img79.png", stock: true },
     { id: 102, name: "Sprite 1L", price: "3.300", category: "Bebidas", icon: "🥤", image: "imagen/img80.png", stock: true },
     { id: 103, name: "Fanta 1L", price: "3.300", category: "Bebidas", icon: "🥤", image: "imagen/img81.png", stock: true },
@@ -12,23 +12,25 @@ const menuData = [
     { id: 108, name: "Aquarius 1 1/2 L", price: "2.500", category: "Bebidas", icon: "🧃", image: "imagen/img85.png", stock: true },
     { id: 109, name: "Cerveza Imperial Golden", price: "4.500", category: "Bebidas", icon: "🍺", image: "imagen/img86.png", stock: true },
     { id: 110, name: "Cerveza Stella", price: "5.000", category: "Bebidas", icon: "🍺", image: "imagen/img87.png", stock: true },
-
-    // --- COMIDAS EXISTENTES ---
+    // PAPAS
     { id: 4, name: "Papas Fritas", price: "6.000", category: "Papas Fritas", icon: "🍟", image: "imagen/img10.jpeg", stock: true },
     { id: 6, name: "Papas Gratinadas con Cheddar y verdeo", price: "12.000", category: "Papas Fritas", icon: "🍟", image: "imagen/img1.jpeg", stock: true },
+    // MIGA
     { id: 7, name: "Carlito", price: "6.000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img8.jpeg", stock: true }, 
     { id: 8, name: "Triple Frío de Verduras con Jamón y Queso", price: "7.000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img7.jpeg", stock: true },
-    { id: 44, name: "Triple Tostado de Verduras con jamón y Queso ", price: "7.000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img65.jpeg", stock: true },
+    { id: 44, name: "Triple Tostado de Verduras con jamón y Queso", price: "7.000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img65.jpeg", stock: true },
     { id: 43, name: "Miga con Jamón y Queso", price: "6.000", category: "Sándwiches de Migas", icon: "🥪", image: "imagen/img64.jpeg", stock: true },
+    // PIZZAS
     { id: 9, name: "Pizza Muzzarella", price: "12.000", category: "Pizzas", icon: "🍕", image: "imagen/img31.jpeg", stock: true }, 
-    { id: 11, name: "Pizza Calabresa ", price: "14.000", category: "Pizzas", icon: "🍕", image: "imagen/img5.jpeg", stock: true },
+    { id: 11, name: "Pizza Calabresa", price: "14.000", category: "Pizzas", icon: "🍕", image: "imagen/img5.jpeg", stock: true },
     { id: 12, name: "Pizza Especial", price: "15.000", category: "Pizzas", icon: "🍕", image: "imagen/img6.jpeg", stock: true },
-    { id: 40, name: "Pizza Napolitana ", price: "16.000", category: "Pizzas", icon: "🍕", image: "imagen/img.jpeg", stock: true },
+    { id: 40, name: "Pizza Napolitana", price: "16.000", category: "Pizzas", icon: "🍕", image: "imagen/img.jpeg", stock: true },
     { id: 5, name: "Pizza Napolitana Completa", price: "17.000", category: "Pizzas", icon: "🍕", image: "imagen/img.jpeg", stock: true },
     { id: 33, name: "Pizza Roquefort y Panceta", price: "16.000", category: "Pizzas", icon: "🍕", image: "imagen/img51.jpeg", stock: true },
-    { id: 37, name: "Pizza Cheddar y Panceta ", price: "16.000", category: "Pizzas", icon: "🍕", image: "imagen/img59.jpeg", stock: true },
-    { id: 39, name: "Pizza Napolitana con Jamón ", price: "17.000", category: "Pizzas", icon: "🍕", image: "imagen/img61.jpeg", stock: true },
+    { id: 37, name: "Pizza Cheddar y Panceta", price: "16.000", category: "Pizzas", icon: "🍕", image: "imagen/img59.jpeg", stock: true },
+    { id: 39, name: "Pizza Napolitana con Jamón", price: "17.000", category: "Pizzas", icon: "🍕", image: "imagen/img61.jpeg", stock: true },
     { id: 46, name: "Pizza Cuatro Sabores", price: "17.000", category: "Pizzas", icon: "🍕", image: "imagen/img69.jpeg", stock: true },
+    // HAMBURGUESAS
     { id: 16, name: "Hamburguesa Simple", price: "7.000", category: "Hamburguesas", icon: "🍔", image: "imagen/img28.jpeg", stock: true }, 
     { id: 17, name: "Hamburguesa Especial", price: "8.000", category: "Hamburguesas", icon: "🍔", image: "imagen/img.jpeg", stock: true },
     { id: 18, name: "Hamburguesa Gratinada", price: "10.000", category: "Hamburguesas", icon: "🍔", image: "imagen/img.jpeg", stock: true },
@@ -36,16 +38,20 @@ const menuData = [
     { id: 19, name: "Hamburguesa Roquefort y Panceta", price: "9.000", category: "Hamburguesas", icon: "🍔", image: "imagen/img32.jpeg", stock: true },
     { id: 2, name: "Hamburguesa con Cheddar y Panceta", price: "9.000", category: "Hamburguesas", icon: "🍔", image: "imagen/img32.jpeg", stock: true },
     { id: 32, name: "Hamburguesa al Plato", price: "12.000", category: "Hamburguesas", icon: "🍔", image: "imagen/img50.jpeg", stock: true },
+    // SANDWICH MILA
     { id: 20, name: "Sándwich Milanesa de Carne (Simple)", price: "15.000", category: "Sándwiches de Mila", icon: "🥪", image: "imagen/img26.jpeg", stock: true }, 
     { id: 13, name: "Sándwich Milanesa de Carne (Especial)", price: "17.000", category: "Sándwiches de Mila", icon: "🥪", image: "imagen/img.jpeg", stock: true },
     { id: 14, name: "Sándwich Milanesa de Pollo (Simple)", price: "15.000", category: "Sándwiches de Mila", icon: "🥪", image: "imagen/img.jpeg", stock: true },
     { id: 15, name: "Sándwich Milanesa de Pollo(Especial)", price: "17.000", category: "Sándwiches de Mila", icon: "🥪", image: "imagen/img.jpeg", stock: true },
+    // LOMOS
     { id: 22, name: "Lomo simple", price: "17.000", category: "Lomos", icon: "🥩", image: "imagen/img25.jpeg", stock: true }, 
     { id: 23, name: "Lomo especial", price: "18.000", category: "Lomos", icon: "🥩", image: "imagen/img22.jpeg", stock: true },
     { id: 24, name: "Lomo cheddar y panceta", price: "18.000", category: "Lomos", icon: "🥩", image: "imagen/img.jpeg", stock: true },
+    // MILAS
     { id: 50, name: "Milanesa Fugazza", price: "24.000", category: "Milanesas Individuales", icon: "🍽️", image: "imagen/img75.jpeg", stock: true },
     { id: 27, name: "Milanesa Cheddar con Panceta más🍟", price: "26.000", category: "Milanesas p/compartir", icon: "🍽️", image: "imagen/img27.jpeg", stock: true }, 
     { id: 28, name: "Milanesa Napolitana más🍟", price: "25.000", category: "Milanesas p/compartir", icon: "🍽️", image: "imagen/img73.jpeg", stock: true },
+    // PICADAS
     { id: 29, name: "Picada Individual", price: "14.000", category: "Picadas", icon: "🧀", image: "imagen/img67.jpeg", stock: true }, 
     { id: 30, name: "Picada para 2", price: "25.000", category: "Picadas", icon: "🧀", image: "imagen/img15.jpeg", stock: true },
     { id: 31, name: "Picada Familiar", price: "30.000", category: "Picadas", icon: "🧀", image: "imagen/img16.jpeg", stock: true }
@@ -57,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const pass = prompt("Acceso Administrador:");
         if (pass === "1234") {
             document.body.classList.toggle("admin-active");
-            alert("Modo Admin: Toca el nombre de un producto para agotar/reponer stock.");
+            alert("Modo Admin Activo.");
         }
     };
 
@@ -65,19 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!document.body.classList.contains("admin-active")) return;
         const p = menuData.find(i => i.id === id);
         p.stock = !p.stock;
-        displayMenu(document.querySelector('#category-buttons .btn-light').innerText);
+        displayMenu();
     };
 
     window.agregarAlCarrito = (id) => {
         const prod = menuData.find(i => i.id === id);
         if (!prod.stock) return;
-        
         const existente = carrito.find(i => i.id === id);
-        if (existente) {
-            existente.cantidad++;
-        } else {
-            carrito.push({ ...prod, cantidad: 1 });
-        }
+        if (existente) existente.cantidad++;
+        else carrito.push({ ...prod, cantidad: 1 });
         actualizarInterfaz();
     };
 
@@ -90,65 +92,55 @@ document.addEventListener('DOMContentLoaded', () => {
     function actualizarInterfaz() {
         const count = carrito.reduce((acc, item) => acc + item.cantidad, 0);
         document.getElementById('cart-count').innerText = count;
-
         const lista = document.getElementById('lista-carrito');
         lista.innerHTML = '';
         let total = 0;
-
         carrito.forEach((item, index) => {
             const precio = parseInt(item.price.replace(/\./g, ''));
-            const subtotal = precio * item.cantidad;
-            total += subtotal;
-
-            lista.innerHTML += `
-                <li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-white border-secondary">
-                    <div style="width: 50%">${item.name}</div>
-                    <div class="d-flex align-items-center">
-                        <button class="btn btn-sm btn-outline-warning me-2" onclick="actualizarCantidad(${index}, -1)">-</button>
-                        <span>${item.cantidad}</span>
-                        <button class="btn btn-sm btn-outline-warning ms-2" onclick="actualizarCantidad(${index}, 1)">+</button>
-                    </div>
-                    <span class="ms-2 fw-bold">$${subtotal.toLocaleString('es-AR')}</span>
-                </li>`;
+            total += precio * item.cantidad;
+            lista.innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-white border-secondary">
+                <div style="width: 60%">${item.name}</div>
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-sm btn-outline-warning" onclick="actualizarCantidad(${index}, -1)">-</button>
+                    <span class="mx-2">${item.cantidad}</span>
+                    <button class="btn btn-sm btn-outline-warning" onclick="actualizarCantidad(${index}, 1)">+</button>
+                </div>
+            </li>`;
         });
-
         document.getElementById('total-pago').innerText = `$${total.toLocaleString('es-AR')}`;
-        const pago = document.getElementById('forma-pago').value;
-        document.getElementById('contenedor-alias').style.display = (pago === "Transferencia") ? 'block' : 'none';
     }
-
-    document.getElementById('forma-pago').addEventListener('change', actualizarInterfaz);
-
-    window.enviarPedidoWhatsApp = () => {
-        const mesa = document.getElementById('cliente-mesa').value;
-        if (!mesa || carrito.length === 0) return alert("Completa la mesa y agrega productos.");
-
-        let msg = `*DELEITTESE LOCAL - MESA ${mesa}* 🍽️\n\n`;
-        carrito.forEach(i => msg += `• ${i.cantidad}x ${i.name} ($${i.price})\n`);
-        msg += `\n*TOTAL: ${document.getElementById('total-pago').innerText}*`;
-        msg += `\nPAGO: ${document.getElementById('forma-pago').value}`;
-        
-        const ticketID = Date.now();
-        msg += `\n\n📄 Ver Ticket: https://tu-web.com/ticket?id=${ticketID}`;
-
-        window.open(`https://wa.me/5493644679057?text=${encodeURIComponent(msg)}`, '_blank');
-        carrito = [];
-        actualizarInterfaz();
-    };
 
     window.imprimirTicket = () => {
         const mesa = document.getElementById('cliente-mesa').value || "S/N";
-        let t = `<html><body style="font-family:monospace; width:250px; padding: 20px;">
-                <h2 style="text-align:center">DELEITTESE</h2>
-                <p style="text-align:center">MESA: ${mesa}</p>
-                <hr>`;
-        carrito.forEach(i => t += `<p>${i.cantidad}x ${i.name.substring(0,15)}... $${i.price}</p>`);
-        t += `<hr><h3 style="text-align:right">TOTAL: ${document.getElementById('total-pago').innerText}</h3>
-                <p style="font-size:10px; text-align:center">¡Gracias por su compra!</p>
+        let t = `<html><body style="font-family:monospace; width:280px; padding: 10px;">
+                <h2 style="text-align:center; margin:0;">DELEITTESE</h2>
+                <div style="text-align:center; border: 2px solid #000; padding: 5px; margin: 10px 0;">
+                    <span style="font-size:24px; font-weight:bold;">MESA: ${mesa}</span>
+                </div>
+                <hr style="border:1px dashed #000">`;
+        
+        carrito.forEach(i => {
+            t += `<p style="margin:8px 0; font-size:16px;"><strong>• ${i.cantidad}x ${i.name.toUpperCase()}</strong></p>`;
+        });
+        
+        t += `<hr style="border:1px dashed #000">
+                <h3 style="text-align:right">TOTAL: ${document.getElementById('total-pago').innerText}</h3>
+                <p style="text-align:center; font-size:11px;">${new Date().toLocaleString()}</p>
                 <script>window.print(); setTimeout(() => { window.close(); }, 500);</script></body></html>`;
         const v = window.open('', '_blank');
         v.document.write(t);
         v.document.close();
+    };
+
+    window.enviarPedidoWhatsApp = () => {
+        const mesa = document.getElementById('cliente-mesa').value;
+        if (!mesa || carrito.length === 0) return alert("Indique su Mesa.");
+        let msg = `*DELEITTESE - MESA ${mesa}*\n\n`;
+        carrito.forEach(i => msg += `• ${i.cantidad}x ${i.name}\n`);
+        msg += `\n*TOTAL: ${document.getElementById('total-pago').innerText}*`;
+        window.open(`https://wa.me/5493644679057?text=${encodeURIComponent(msg)}`, '_blank');
+        carrito = [];
+        actualizarInterfaz();
     };
 
     window.llamarMozo = () => {
@@ -161,17 +153,15 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = '';
         const data = cat === 'Todas' ? menuData : menuData.filter(i => i.category === cat);
         data.forEach(item => {
-            // Lógica para no cortar imágenes de bebidas [cite: 2025-10-27]
             const extraClass = item.category === 'Bebidas' ? 'img-bebida' : '';
-            
             const div = document.createElement('div');
-            div.className = 'col-6 col-md-4 col-lg-3 mb-4'; 
+            div.className = 'col-item mb-4'; 
             div.innerHTML = `
                 <div class="card menu-card h-100 ${item.stock ? '' : 'sin-stock'}">
                     <img src="${item.image}" class="card-img-top menu-item-image ${extraClass}" alt="${item.name}">
                     <div class="card-body d-flex flex-column text-center p-2">
                         <h6 class="card-title fw-bold small" onclick="toggleStock(${item.id})">${item.icon} ${item.name}</h6>
-                        <p class="price mt-auto text-primary fw-bold">$${item.price}</p>
+                        <p class="price mt-auto">$${item.price}</p>
                         <button class="btn ${item.stock ? 'btn-dark' : 'btn-secondary disabled'} btn-sm w-100" onclick="agregarAlCarrito(${item.id})">
                             ${item.stock ? 'Agregar' : 'AGOTADO'}
                         </button>
@@ -189,12 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
         b.innerText = c;
         b.onclick = () => {
             displayMenu(c);
-            document.querySelectorAll('#category-buttons button').forEach(btn => {
-                btn.classList.remove('btn-light');
-                btn.classList.add('btn-outline-light');
-            });
-            b.classList.remove('btn-outline-light');
-            b.classList.add('btn-light');
+            document.querySelectorAll('#category-buttons button').forEach(btn => btn.classList.replace('btn-light', 'btn-outline-light'));
+            b.classList.replace('btn-outline-light', 'btn-light');
         };
         if(c==='Todas') b.classList.replace('btn-outline-light', 'btn-light');
         catContainer.appendChild(b);

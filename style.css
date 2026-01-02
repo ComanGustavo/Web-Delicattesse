@@ -1,145 +1,28 @@
-/* Estilos Generales */
-body {
-    background: #121212;
-    color: #ffffff;
-    font-family: 'Segoe UI', sans-serif;
-    overflow-x: hidden;
-}
+body { background: #121212; color: #ffffff; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
+.bienvenida-texto { color: #ff5722; font-size: 1.1rem; font-style: italic; max-width: 800px; margin: 0 auto 20px; text-align: center; }
 
-.bienvenida-texto {
-    color: #ff5722;
-    font-size: 1.1rem;
-    font-style: italic;
-    max-width: 800px;
-    margin: 0 auto 20px;
-}
+#menu-list { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; padding: 0; }
 
-/* Galería 4 Columnas [Personalización 2025-10-27] */
-#menu-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    padding: 0;
-}
+/* 4 Columnas [cite: 2025-10-27] */
+.col-item { width: calc(25% - 15px) !important; min-width: 200px; margin-bottom: 20px; flex: 0 0 auto; }
 
-/* Forzamos las 4 columnas en desktop [cite: 2025-10-27] */
-.col-item {
-    width: calc(25% - 12px) !important; 
-    min-width: 200px;
-    margin-bottom: 20px;
-}
+.menu-item-image { height: 250px; object-fit: cover; width: 100%; border-bottom: 1px solid #333; }
+.menu-item-image.img-bebida { object-fit: contain !important; background-color: #1a1a1a; padding: 15px; }
 
-/* Estilo general para platos (Pizzas, Hamburguesas, etc.) [cite: 2025-10-27] */
-.menu-item-image {
-    height: 250px; /* Altura fija para uniformidad [cite: 2025-10-27] */
-    object-fit: cover; /* Llena el espacio para que la comida se vea grande [cite: 2025-10-27] */
-    width: 100%;
-}
+.menu-card { background: #1e1e1e; color: white; border: 1px solid #333; border-radius: 10px; overflow: hidden; transition: 0.3s; }
+.menu-card:hover { transform: translateY(-5px); border-color: #ffc107; }
 
-/* REGLA ESPECIAL PARA BEBIDAS: Evita que se corten las botellas [cite: 2025-10-27] */
-.menu-item-image.img-bebida {
-    object-fit: contain; /* Muestra la botella completa de arriba a abajo [cite: 2025-10-27] */
-    background-color: #1a1a1a; /* Fondo oscuro para los laterales de la botella */
-    padding: 10px; /* Margen interno para que la botella no toque los bordes */
-}
+.price { font-size: 1.2rem; font-weight: bold; color: #ffc107 !important; }
+.sin-stock { filter: grayscale(1); opacity: 0.5; }
 
-/* Tarjetas de Producto */
-.menu-card {
-    background: #1e1e1e;
-    color: white;
-    border: 1px solid #333;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.menu-card:hover { 
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    border-color: #ffc107;
-}
-
-.price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffc107 !important;
-}
-
-.sin-stock { 
-    filter: grayscale(1); 
-    opacity: 0.5; 
-}
-
-/* Botón Mozo Flotante */
+/* Botón Mozo */
 .btn-mozo {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    background: #ffc107;
-    border: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 999;
-    transition: 0.3s;
+    position: fixed; bottom: 25px; right: 25px; width: 65px; height: 65px;
+    border-radius: 50%; background: #ffc107; border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); font-size: 24px;
+    cursor: pointer; z-index: 999; transition: 0.3s;
 }
+.btn-mozo:hover { transform: scale(1.1); background: #e0a800; }
 
-.btn-mozo:hover {
-    transform: scale(1.1);
-    background: #e0a800;
-}
-
-/* Modo Admin */
-.admin-active .card-title { 
-    color: #007bff !important; 
-    text-decoration: underline; 
-    cursor: cell; 
-}
-
-/* Responsividad para móviles y tablets */
-@media (max-width: 992px) {
-    .col-item { 
-        width: calc(50% - 10px) !important; /* 2 por fila en tablets */
-        min-width: 150px;
-    }
-    .menu-item-image { 
-        height: 180px; 
-    }
-}
-
-@media (max-width: 576px) {
-    .col-item { 
-        width: 100% !important; /* 1 por fila en celulares muy chicos */
-    }
-}
-
-/* Estilo para el selector de forma de pago (Personalizado) */
-#forma-pago {
-    background-color: #2c2c2c !important;
-    color: #ffffff !important;
-    border: 1px solid #444 !important;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 12px;
-    padding-right: 2.5rem;
-    cursor: pointer;
-}
-
-#forma-pago option {
-    background-color: #1e1e1e;
-    color: white;
-}
-
-/* Ajustes del Carrito en el Modal [cite: 2025-12-13] */
-#lista-carrito .list-group-item {
-    border-left: 4px solid #ffc107;
-    margin-bottom: 5px;
-}
+@media (max-width: 992px) { .col-item { width: calc(50% - 10px) !important; } }
+@media (max-width: 576px) { .col-item { width: 100% !important; } }
